@@ -23,8 +23,10 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+/// <reference types="cypress"/>
+import { faker } from '@faker-js/faker';
 
-Cypress.Commands.add('geraToken', (email, senha) => {
+Cypress.Commands.add('geraTokenAdm', (email, senha) => {
     cy.request({
         method: 'POST', 
         url: 'login', 
@@ -38,7 +40,21 @@ Cypress.Commands.add('geraToken', (email, senha) => {
     })
  })
 
- Cypress.Commands.add('cadastrarUsuario', (nome, email, senha) =>{
+Cypress.Commands.add('geraTokenComum', (email, senha) => {
+    cy.request({
+        method: 'POST', 
+        url: 'login', 
+        body: {
+            email: email,
+            password: senha
+        }
+    }).then((response) => {
+       expect(response.status).to.equal(200) 
+       return response.body.token
+    })
+ })
+
+Cypress.Commands.add('cadastrarUsuario', (nome, email, senha) =>{
         cy.api({
             method: 'POST',
             url: 'users',
@@ -52,3 +68,22 @@ Cypress.Commands.add('geraToken', (email, senha) => {
             return response.body.user.id
         })
  })
+
+Cypress.Commands.add('cadastrarLivro', (token) => {
+    cy.api({
+        method: 'POST',
+        url: 'books',
+        headers: {
+            Authorization: token
+        },
+        body: {
+            title: faker.person.fullName(),
+            author: 'José de Alencar',
+            category: 'Literatura Brasileira',
+            total_copies: 2
+        }
+    }).then((response) => {
+        expect(response.status).to.equal(201)
+        return response.body.book.id
+    })
+})
