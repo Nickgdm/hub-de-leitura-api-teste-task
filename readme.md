@@ -47,16 +47,16 @@ npm test
 Abrir a interface do Cypress:
 
 ```bash
-npm run cypress:open
+npx cypress open
 ```
 
-Executar somente o arquivo principal da atividade:
+O `package.json` define apenas o script `test`; por isso, use `npx cypress open` para abrir a interface gráfica. Para executar um arquivo específico, confira primeiro os caminhos existentes em `cypress/e2e/` e então use, por exemplo:
 
 ```bash
 npx cypress run --spec "cypress/e2e/exercicio.cy.js"
 ```
 
-Confira os scripts disponíveis no `package.json` e verifique se a API está em execução antes de iniciar os testes.
+O comando com `--spec` só funcionará se esse arquivo existir. Verifique também se a API está em execução antes de iniciar os testes.
 
 ## Estrutura do projeto
 
