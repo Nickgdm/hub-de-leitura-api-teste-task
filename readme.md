@@ -1,5 +1,8 @@
-# 📚 Hub de Leitura — Testes de API com Cypress
-
+<pre>
+╔═════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║                               Hub de Leitura — Testes de API com Cypress                                ║
+╚═════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+</pre>
 Projeto de testes automatizados com Cypress para uma API REST de gerenciamento de livros. A atividade propõe implementar e validar operações de consulta, criação, atualização e remoção de livros, incluindo cenários positivos, dados inválidos e autenticação.
 
 ## Objetivos
@@ -106,8 +109,9 @@ Esta atividade permite praticar automação de testes de API com Cypress, inclui
 
 Os testes devem ser executados com a API disponível e com configurações compatíveis com o ambiente local. Confirme os scripts definidos no `package.json` e os dados de autenticação antes da execução.
 
----
-
-## 🎓 Formação
-
-Atividade desenvolvida durante a formação profissionalizante em **Quality Assurance (QA) pela EBAC — Escola Britânica de Artes Criativas e Tecnologia**.
+<pre>
+╔═════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║         Atividade desenvolvida durante a formação profissionalizante em Quality Assurance (QA)          ║
+║         pela EBAC — Escola Britânica de Artes Criativas e Tecnologia                                    ║
+╚═════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+</pre>
