@@ -111,7 +111,7 @@ Os testes devem ser executados com a API disponível e com configurações compa
 
 <pre>
 ╔═════════════════════════════════════════════════════════════════════════════════════════════════════════╗
-║         Atividade desenvolvida durante a formação profissionalizante em Quality Assurance (QA)          ║
-║         pela EBAC — Escola Britânica de Artes Criativas e Tecnologia                                    ║
+║       Atividade desenvolvida durante a formação profissionalizante em Quality Assurance (QA) pela       ║
+║                     EBAC — Escola Britânica de Artes Criativas e Tecnologia                             ║
 ╚═════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 </pre>
